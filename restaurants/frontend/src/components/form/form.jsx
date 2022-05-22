@@ -13,17 +13,13 @@ import { useState } from 'react';
 import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios";
 
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
 
 const Form = ({setOpen}) =>  {
     const { register, handleSubmit } = useForm();
     const [member, setMember] = useState('');
     const navigate = useNavigate();
-    // const notify = () => toast("Wow so easy!");
 
 
     
@@ -47,7 +43,6 @@ const Form = ({setOpen}) =>  {
             },
             data : JSON.stringify(userObject)
         })
-        // alert("Success")
         navigate('/', {replace: true})
     }
     // For the select part
@@ -134,7 +129,6 @@ const Form = ({setOpen}) =>  {
                                 color="success"
                                 onClick={handleSubmit(onSubmit)}
                                 >
-                                <ToastContainer />
                                 <p className='text'>Submit</p>
                         </Button>
                     </div>
