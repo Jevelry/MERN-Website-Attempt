@@ -1,0 +1,54 @@
+.title {
+    text-align: center;
+    
+}
+.name {
+    color: rgb(29, 225, 225);
+    font-size: 150%;
+}
+.desc {
+    font-size: 130%;
+    line-height: 10px;
+    color: rgb(29, 225, 225);
+    margin-bottom: 1em;
+}
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+.button-cell{
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+.button-font {
+    font-family: 'Smooch', cursive;
+}
+.image {
+    max-width:100%;
+    max-height:100%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.paper {
+    font-size: medium;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    max-width: 600px;
+}

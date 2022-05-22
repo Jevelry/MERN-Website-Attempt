@@ -1,0 +1,23 @@
+.table {
+
+    width: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto 0 auto;
+}
+.main {
+    
+    
+}
+.row {
+}
+.title {
+    color: rgb(29, 225, 225);
+    font-size: 150%;
+    font-weight: bold;
+}
+.row:hover {
+    background-color: grey;
+    
+}

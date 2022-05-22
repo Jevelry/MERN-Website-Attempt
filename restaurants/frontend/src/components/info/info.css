@@ -1,0 +1,9 @@
+.row:hover {
+    background-color: grey;
+    cursor: default;
+}
+.button {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+}
