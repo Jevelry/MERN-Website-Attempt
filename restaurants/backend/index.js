@@ -4,18 +4,15 @@ const cors = require("cors")
 const bp = require('body-parser')
 const { type } = require("express/lib/response")
 const app = express()
+require("dotenv").config()
 app.use(cors())
 app.use(bp.json())
-app.listen(3001, ()=> {
-})
-app.get("/", (req,res) => {
-})
 
-app.post("/", async (req,res) => {
+app.listen(process.env.PORT || 3001, ()=> {
 })
 
 app.post("/submit", async (req,res) => {
-    // REMINDER GET FRONTEND TO CHECK FORMAT
+    // get data from frontend form submit
     const {name, location, date, comments, score, author} = req.body
     // get authentication data from secrets file
     const auth = new google.auth.GoogleAuth({
@@ -29,6 +26,7 @@ app.post("/submit", async (req,res) => {
         version: "v4", 
         auth: client
     })
+    // capitalise each word
     values = capitalizeWords([name, location, date, comments, score, author])
     try {
         const res = await googleSheets.spreadsheets.values.append({
@@ -63,6 +61,7 @@ app.get("/getRestaurants", async (req,res) => {
         range: "Sheet1!A:B"
     })
     let data = getRows.data.values
+    // remove duplicate entries
     let uniqueArray = Array.from(new Set(data.map(JSON.stringify)), JSON.parse);
     res.send(uniqueArray)
 })
