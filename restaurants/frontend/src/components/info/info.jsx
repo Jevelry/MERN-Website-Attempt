@@ -46,7 +46,7 @@ const Info = () => {
     const fetchRestaurant = () => {
         axios({
             method: 'get',
-            url:`http://localhost:3001/name/${name}/location/${location}`,
+            url:`https://jevelry-restaurants.herokuapp.com/name/${name}/location/${location}`,
             headers : {
             "Content-Type":"application/json",  
             },

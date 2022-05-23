@@ -36,7 +36,7 @@ const Form = ({setOpen}) =>  {
 
         axios({
             method: 'post',
-            url:"http://localhost:3001/submit",
+            url:"https://jevelry-restaurants.herokuapp.com/submit",
             
             headers : {
             "Content-Type":"application/json",  
